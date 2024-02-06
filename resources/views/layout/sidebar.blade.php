@@ -68,7 +68,7 @@
                         <a href="/new-car" class="nav-link">إضافة سيارة</a>
                       </li>
                       <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى السيارات</a>
+                        <a href="/cars" class="nav-link">بحث فى السيارات</a>
                       </li>
                     </ul>
                   </div>
