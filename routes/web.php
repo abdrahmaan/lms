@@ -89,3 +89,19 @@ use App\Http\Controllers\UsersController;
        Route::post('/change-password', [UsersController::class,"change_password_logic"] );
    // ***************************************************************************
 
+
+
+   // Auth 
+
+    // Login Page
+    Route::get('/login', [UsersController::class,"login_page"]);
+
+    // Login - submit
+    Route::post('/login', [UsersController::class,"login_logic"]);
+
+    // Logout 
+    Route::get('/logout', [UsersController::class,"logout"]);
+
+
+// ***************************************************************************
+

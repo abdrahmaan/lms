@@ -227,7 +227,8 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 							</div>
 						</li>
-						<li class="nav-item dropdown">
+            {{-- Notification --}}
+						<li class="nav-item dropdown d-none">
 							<a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i data-feather="bell"></i>
 								<div class="indicator">
@@ -301,33 +302,33 @@ License: For each use you must have a valid license purchased only from above li
 										<img class="wd-80 ht-80 rounded-circle" src="{{asset('assets/images/faces/face1.jpg')}}" alt="">
 									</div>
 									<div class="text-center">
-										<p class="tx-16 fw-bolder">Amiah Burton</p>
-										<p class="tx-12 text-muted">amiahburton@gmail.com</p>
+										<p class="tx-16 fw-bolder">{{session()->get("user-data")->name}}</p>
+										<p class="tx-12 text-muted">{{session()->get("user-data")->username}}</p>
 									</div>
 								</div>
                 <ul class="list-unstyled p-1">
-                  <li class="dropdown-item py-2">
+                  <li class="dropdown-item py-2  d-none">
                     <a href="pages/general/profile.html" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="user"></i>
                       <span>Profile</span>
                     </a>
                   </li>
                   <li class="dropdown-item py-2">
-                    <a href="javascript:;" class="text-body ms-0">
+                    <a href="/change-password" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="edit"></i>
-                      <span>Edit Profile</span>
+                      <span>تغيير كلمة السر</span>
                     </a>
                   </li>
-                  <li class="dropdown-item py-2">
-                    <a href="javascript:;" class="text-body ms-0">
+                  <li class="dropdown-item py-2 d-none">
+                    <a href="/change-password" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="repeat"></i>
                       <span>Switch User</span>
                     </a>
                   </li>
                   <li class="dropdown-item py-2">
-                    <a href="javascript:;" class="text-body ms-0">
+                    <a href="/logout" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="log-out"></i>
-                      <span>Log Out</span>
+                      <span>تسجيل الخروج</span>
                     </a>
                   </li>
                 </ul>
@@ -389,6 +390,25 @@ License: For each use you must have a valid license purchased only from above li
   <script src="{{asset('assets/js/dashboard-light.js')}}"></script>
 	<!-- End custom js for this page -->
   @yield('script')
+  {{-- Sidebar Color Handle Script --}}
+ <script>
+
+  // This code will be executed when the entire page has finished loading
+  window.addEventListener('load', function() {
+          let SidebarButtons = document.querySelectorAll(".nav-item");
+          let pagePath = window.location.pathname;
+    console.log(SidebarButtons);
+          SidebarButtons.forEach(link => {
+              link.classList.remove("active");
+
+              if (pagePath.includes(link.dataset.url)) {
+                  link.classList.add("active");
+              }
+
+          });
+          
+        });
+</script>
 </body>
 
 <!-- Mirrored from www.nobleui.com/html/template/demo1-rtl/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Feb 2024 13:46:16 GMT -->

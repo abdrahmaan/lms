@@ -14,7 +14,7 @@
             <div class="sidebar-body">
               <ul class="nav">
                 <li class="nav-item nav-category">الرئيسية</li>
-                <li class="nav-item active">
+                <li class="nav-item" data-url="dashboard">
                   <a href="/dashboard" class="nav-link">
                     <i class="link-icon" data-feather="box"></i>
                     <span class="link-title">لوحة التحكم</span>
@@ -56,7 +56,7 @@
                   </div>
                 </li>
                 <li class="nav-item nav-category">السيارات</li>
-                <li class="nav-item">
+                <li class="nav-item" data-url="car">
                   <a class="nav-link" data-bs-toggle="collapse" href="#cars" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="aperture"></i>
                     <span class="link-title"> السيارات</span>
@@ -142,7 +142,7 @@
                   </div>
                 </li>
                 <li class="nav-item nav-category">المستخدمين</li>
-                <li class="nav-item">
+                <li class="nav-item" data-url="user">
                   <a class="nav-link" data-bs-toggle="collapse" href="#users" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="user"></i>
                     <span class="link-title">المستخدمين</span>
@@ -164,13 +164,13 @@
                 </li>
                 
                 <li class="nav-item nav-category">الإعدادات</li>
-                <li class="nav-item">
+                <li class="nav-item" data-url="change-password">
                   <a href="/change-password" class="nav-link">
                     <i class="link-icon" data-feather="key"></i>
                     <span class="link-title">تغيير كلمة السر</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-url="logout">
                   <a href="/logout" class="nav-link">
                     <i class="link-icon" data-feather="lock"></i>
                     <span class="link-title">تسجيل الخروج</span>
