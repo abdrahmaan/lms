@@ -1,18 +1,18 @@
 @extends('layout.master')
-@section('title',"إضافة سيارة")
+@section('title',"تعديل سيارة")
     
 
 @section('content')
 
 <div>
-    <h4 class="mb-4">إضافة سيارة جديدة</h4>
+    <h4 class="mb-4">تعديل بيانات سيارة</h4>
 </div>
 
 <div class="row">
 
         
     <div class="col-12">
-        <form id="new-car" action="/new-car" method="POST">
+        <form id="new-car" action="/edit-car/{{$Data->id}}" method="POST">
             @csrf
             <!-- بيانات السيارة -->
             <div class="card my-3">
@@ -33,6 +33,9 @@
                                     <div class="form-group mx-2 d-block">
                                         <label for="Brand" class="text-right w-100 my-1">ماركة السيارة</label>
                                         <select name="Brand" class="form-control text-right" style="">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->Brand}}">{{$Data->Brand}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="Nissan">Nissan</option>
                                             <option value="Toyota">Toyota</option>
                                         </select>
@@ -44,6 +47,9 @@
                                  <div class="form-group mx-2 d-block">
                                         <label for="Category" class="text-right w-100 my-1">تصنيف السيارة</label>
                                         <select name="Category" class="form-control text-right" style="min-width: 121px">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->Category}}">{{$Data->Category}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="Jeep">Jeep</option>
                                             <option value="Sedan">Sedan</option>
                                             <option value="Pickup">Pickup</option>
@@ -57,21 +63,21 @@
                             <div class="col-lg-3 my-2">
                                 <div class="form-group  mx-2 d-block">
                                     <label for="ModelName" class="text-right w-100 my-1">إسم الموديل</label>
-                                    <input name="ModelName" type="text" class="form-control text-right" id="exampleInputEmail1" placeholder="إسم الموديل">
+                                    <input name="ModelName" value="{{$Data->ModelName}}" type="text" class="form-control text-right" id="exampleInputEmail1" placeholder="إسم الموديل">
                                 </div>
                             </div>
                             <!-- نوع الموديل  -->
                             <div class="col-lg-3 my-2">
                                     <div class="form-group  mx-2 d-block">
                                         <label for="ModelType" class="text-right w-100 my-1">نوع الموديل</label>
-                                        <input name="ModelType" type="text" class="form-control text-right" id="exampleInputEmail1" placeholder="نوع الموديل">
+                                        <input name="ModelType" value="{{$Data->ModelType}}" type="text" class="form-control text-right" id="exampleInputEmail1" placeholder="نوع الموديل">
                                     </div>
                                 </div>
                             <!-- سنة الصنع  -->
                             <div class="col-lg-3 my-2">
                                 <div class="form-group  mx-2 d-block">
                                     <label for="ModelYear" class="text-right w-100 my-1">سنة الصنع</label>
-                                    <input name="ModelYear" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="سنة الصنع">
+                                    <input name="ModelYear" value="{{$Data->ModelYear}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="سنة الصنع">
                                 </div>
                             </div>
                             
@@ -106,6 +112,9 @@
                                     <div class="form-group mx-2 d-block">
                                         <label for="Transmission" class="text-right w-100 my-1">نوع الإنتقال</label>
                                         <select name="Transmission" class="form-control text-right" style="">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->Transmission}}">{{$Data->Transmission}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="A/T">A/T</option>
                                             <option value="M/T">M/T</option>
                                         </select>
@@ -116,6 +125,9 @@
                                 <div class="form-group mx-2 d-block">
                                         <label for="TransmissionCount" class="text-right w-100 my-1">عدد الإنتقالات</label>
                                         <select name="TransmissionCount" class="form-control text-right" style="min-width: 121px">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->TransmissionCount}}">{{$Data->TransmissionCount}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -134,6 +146,9 @@
                                 <div class="form-group mx-2 d-block">
                                         <label for="FourXFour" class="text-right w-100 my-1">4X4/4X2</label>
                                         <select name="FourXFour" class="form-control text-right" style="min-width: 121px">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->FourXFour}}">{{$Data->FourXFour}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="4X4">4X4</option>
                                             <option value="4X2">4X2</option>
                                             <option value="إفتراضى">إفتراضى</option>
@@ -147,6 +162,9 @@
                                 <div class="form-group mx-2 d-block">
                                         <label for="PushingType" class="text-right w-100 my-1">نوع الدفع</label>
                                         <select name="PushingType" class="form-control text-right" style="min-width: 121px">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->PushingType}}">{{$Data->PushingType}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="أمامى">أمامى</option>
                                             <option value="خلفى">خلفى</option>
                                         </select>
@@ -156,7 +174,7 @@
                                 <div class="col-lg-3 my-1">
                                         <div class="form-group  mx-2 d-block">
                                             <label for="CC" class="text-right w-100 my-1">CC</label>
-                                            <input name="CC" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="CC قوة الـ">
+                                            <input name="CC" value="{{$Data->CC}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="CC قوة الـ">
                                         </div>
                                 </div>
                             <!-- عدد السليندر -->
@@ -164,6 +182,9 @@
                                     <div class="form-group mx-2 d-block">
                                         <label for="Cylinder" class="text-right w-100 my-1">عدد السليندر</label>
                                         <select name="Cylinder" class="form-control text-right" style="min-width: 121px">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->Cylinder}}">{{$Data->Cylinder}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -195,7 +216,7 @@
                             <div class="col-lg-3 my-1">
                                 <div class="form-group  mx-2 d-block">
                                     <label for="HorsePower" class="text-right w-100 my-1">قوة الحصان</label>
-                                    <input name="HorsePower" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="قوة الحصان">
+                                    <input name="HorsePower" value="{{$Data->HorsePower}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="قوة الحصان">
                                 </div>
                             </div>
                             <!-- نوع التانك -->
@@ -203,6 +224,9 @@
                                 <div class="form-group mx-2 d-block">
                                         <label for="FuelType" class="text-right w-100 my-1">نوع التانك</label>
                                         <select name="FuelType" class="form-control text-right" style="min-width: 121px">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->FuelType}}">{{$Data->FuelType}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="Gas">Gas</option>
                                             <option value="Diesel">Diesel</option>
                                         </select>
@@ -212,7 +236,7 @@
                             <div class="col-lg-3 my-1">
                                 <div class="form-group  mx-2 d-block">
                                     <label for="FuelLiter" class="text-right w-100 my-1">عدد الليترات/تانك</label>
-                                    <input name="FuelLiter" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="عدد الليترات">
+                                    <input name="FuelLiter" value="{{$Data->FuelLiter}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="عدد الليترات">
                                 </div>
                             </div>                         
                         </div>
@@ -247,28 +271,28 @@
                                 <div class="col-lg-3 my-1">
                                         <div class="form-group  mx-2 d-block">
                                             <label for="Height" class="text-right w-100 my-1">الطول</label>
-                                            <input name="Height" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="الطول">
+                                            <input name="Height" value="{{$Data->Height}}"   type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="الطول">
                                         </div>
                                 </div>
                             <!-- عرض  -->
                                 <div class="col-lg-3 my-1">
                                         <div class="form-group  mx-2 d-block">
                                             <label for="Width" class="text-right w-100 my-1">العرض</label>
-                                            <input name="Width" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="العرض">
+                                            <input name="Width" value="{{$Data->Width}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="العرض">
                                         </div>
                                 </div>
                             <!-- إرتفاع  -->
                                 <div class="col-lg-3 my-1">
                                         <div class="form-group  mx-2 d-block">
                                             <label for="Length" class="text-right w-100 my-1">الإرتفاع</label>
-                                            <input name="Length" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="الإرتفاع">
+                                            <input name="Length" value="{{$Data->Length}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="الإرتفاع">
                                         </div>
                                 </div>
                             <!-- مقاس الكاوتش  -->
                                 <div class="col-lg-3 my-1">
                                         <div class="form-group  mx-2 d-block">
                                             <label for="Tier" class="text-right w-100 my-1">مقاس الكاوتش</label>
-                                            <input name="Tier" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="مقاس الكاوتش">
+                                            <input name="Tier" value="{{$Data->Tier}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="مقاس الكاوتش">
                                         </div>
                                 </div>
                             <!-- عدد الركاب -->
@@ -276,6 +300,9 @@
                                 <div class="form-group mx-2 d-block">
                                         <label for="Passengers" class="text-right w-100 my-1">عدد الركاب</label>
                                         <select name="Passengers" class="form-control text-right" style="min-width: 121px">
+                                            <option value="" disabled>الإختيار الحالى</option>
+                                            <option value="{{$Data->Passengers}}">{{$Data->Passengers}}</option>
+                                            <option value="" disabled>الإختيارات المتاحة</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -297,7 +324,7 @@
                             <div class="col-lg-3 my-1">
                                 <div class="form-group  mx-2 d-block">
                                     <label for="PurchasePrice" class="text-right w-100 my-1">سعر الشراء</label>
-                                    <input name="PurchasePrice" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="سعر الشراء">
+                                    <input name="PurchasePrice" value="{{$Data->PurchasePrice}}" type="number" class="form-control text-right" id="exampleInputEmail1" placeholder="سعر الشراء">
                                 </div>
                             </div> 
                         </div>
@@ -307,7 +334,7 @@
     
                     <div class="card-footer text-right">
                         <div class="d-flex justify-content-between align-items-center flex-row-reverse">
-                            <button  type="submit" class="btn btn-success">تسجيل البيانات</button>
+                            <button  type="submit" class="btn btn-success">تعديل البيانات</button>
                              بيانات خاصة بأبعاد السيارة من حيث الطول والعرض والإرتفاع وعدد الركاب ونوع الإطار 
     
                         </div>

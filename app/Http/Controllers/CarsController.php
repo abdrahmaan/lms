@@ -287,7 +287,7 @@ class CarsController extends Controller
         if ($carData) {
             return view("cars.edit", ["Data" => $carData]);
         } else {
-            return redirect()->back();
+            return redirect("/cars");
         }
 
     }
