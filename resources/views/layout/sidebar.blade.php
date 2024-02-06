@@ -2,7 +2,7 @@
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar">
             <div class="sidebar-header">
-              <a href="#" class="sidebar-brand">
+              <a href="/dashboard" class="sidebar-brand">
                 Barq<span>Express</span>
               </a>
               <div class="sidebar-toggler not-active">

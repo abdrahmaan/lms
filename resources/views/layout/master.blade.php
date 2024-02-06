@@ -20,7 +20,7 @@ License: For each use you must have a valid license purchased only from above li
 	<meta name="author" content="NobleUI">
 	<meta name="keywords" content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
-	<title>@yield('title')</title>
+	<title>@yield('title') - برق ستار</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,8 @@ License: For each use you must have a valid license purchased only from above li
   <!-- Layout styles -->  
 	<link rel="stylesheet" href="{{asset('assets/css/demo1/style-rtl.min.css')}}">
   <!-- End layout styles -->
-
+    <!-- Toastr -->
+    <link rel="stylesheet" href="{{asset('assets/vendors/toastr/toastr.min.css')}}">
   <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
 </head>
 <body>
@@ -349,19 +350,23 @@ License: For each use you must have a valid license purchased only from above li
 	<!-- endinject -->
 
 	<!-- Plugin js for this page -->
+  <script src="{{asset('assets/vendors/jquery-validation/jquery.validate.min.js')}}"></script>
   <script src="{{asset('assets/vendors/flatpickr/flatpickr.min.js')}}"></script>
   <script src="{{asset('assets/vendors/apexcharts/apexcharts.min.js')}}"></script>
 	<!-- End plugin js for this page -->
+
+
 
 	<!-- inject:js -->
 	<script src="{{asset('assets/vendors/feather-icons/feather.min.js')}}"></script>
 	<script src="{{asset('assets/js/template.js')}}"></script>
 	<!-- endinject -->
-
+    <!-- Toastr -->
+  <script src="{{asset('assets/vendors/toastr/toastr.min.js')}}"></script>
 	<!-- Custom js for this page -->
   <script src="{{asset('assets/js/dashboard-light.js')}}"></script>
 	<!-- End custom js for this page -->
-
+  @yield('script')
 </body>
 
 <!-- Mirrored from www.nobleui.com/html/template/demo1-rtl/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Feb 2024 13:46:16 GMT -->

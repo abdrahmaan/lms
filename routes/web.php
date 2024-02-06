@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\CarsController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +17,75 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+   // Dashboard 
 
-Route::get('/new-car', function () {
-    return view('cars.create');
-});
+    Route::get('/dashboard', [DashboardController::class,"index"]);
+
+
+   // ***************************************************************************
+
+   // Cars
+
+       // New Car 
+       Route::get('/new-car', [CarsController::class,"create"]);
+
+       // New Car - Store
+       Route::post('/new-car', [CarsController::class,"store"]);
+
+       // Edit Car 
+       Route::get('/edit-car/{id}', [CarsController::class,"edit"]);
+
+       // Edit Car - Update
+       Route::post('/edit-car/{id}', [CarsController::class,"update"]);
+
+       // Delete Car 
+       Route::get('/delete-car/{id}', [CarsController::class,"destroy"]);
+
+       // New Car Import File
+       Route::get('/new-car-import', [CarsController::class,"import_page"]);
+
+       // New Car Import File - Store
+       Route::post('/new-car-import', [CarsController::class,"import_store"]);
+
+      
+
+       // Cars View
+       Route::get('/cars', [CarsController::class,"index"] );
+       
+       // Download Cars File
+       Route::get('/download-file', function () {
+           $path = public_path("Cars-Example.xlsx");
+           $response = response()->download($path);
+           // $response->headers->set('Refresh', '2;url=/cars');
+           
+           return $response;
+           
+       } );
+
+
+
+
+   // ***************************************************************************
+
+   // Users
+
+       // New User 
+       Route::get('/new-user', [UsersController::class,"create"]);
+
+       // New Car - Store
+       Route::post('/new-user', [UsersController::class,"store"]);
+
+       // Delete Car 
+       Route::get('/delete-user/{id}', [UsersController::class,"destroy"]);
+
+       // Users View
+       Route::get('/users', [UsersController::class,"index"] );
+
+       // Change Password 
+       Route::get('/change-password', [UsersController::class,"change_password_page"] );
+
+       // Change Password - Logic
+       Route::post('/change-password', [UsersController::class,"change_password_logic"] );
+   // ***************************************************************************
+

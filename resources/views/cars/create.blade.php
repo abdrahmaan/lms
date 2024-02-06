@@ -319,3 +319,127 @@
 
 </div>
 @endsection
+
+
+@section('script')
+    <script>
+         $(function () {
+            $('#new-car').validate({
+            rules: {
+                ModelName : {
+                    required: true,
+                },
+                ModelType : {
+                    required: true,
+                },
+                ModelYear : {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 4,
+                },
+                CC: {
+                    required: true
+                },
+                HorsePower: {
+                    required: true
+                },
+                FuelLiter: {
+                    required: true
+                },
+                Height: {
+                    required: true
+                },
+                Width: {
+                    required: true
+                },
+                Length: {
+                    required: true
+                },
+                Tier: {
+                    required: true
+                },
+                PurchasePrice: {
+                    required: true
+                },
+            },
+            messages: {
+                ModelName : {
+                    required: "من فضلك أدخل إسم الموديل",
+                },
+                ModelType : {
+                    required: "من فضلك أدخل نوع الموديل",
+                },
+                ModelYear : {
+                    required: "من فضلك أدخل سنة الصنع",
+                    minlength: "من فضلك أدخل سنة صحيحة",
+                    maxlength: "من فضلك أدخل سنة صحيحة",
+                },
+                CC: {
+                    required: "CC من فضلك أدخل الـ"
+                },
+                HorsePower: {
+                    required: "من فضلك أدخل قوة الحصان"
+                },
+                FuelLiter: {
+                    required: "من فضلك أدخل عدد الليترات"
+                },
+                Height: {
+                    required: "من فضلك أدخل طول السيارة"
+                },
+                Width: {
+                    required: "من فضلك أدخل عرض السيارة"
+                },
+                Length: {
+                    required: "من فضلك أدخل إرتفاع السيارة"
+                },
+                Tier: {
+                    required: "من فضلك أدخل مقاس الكاوتش"
+                },
+                PurchasePrice: {
+                    required: "من فضلك أدخل سعر شراء السيارة"
+                },
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight: function (element, errorClass, validClass) {
+            $(element).addClass('is-invalid');
+            },
+            unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass('is-invalid');
+            $(element).addClass('is-valid');
+
+            }
+        });
+    });
+    </script>
+
+      {{-- *********** Errors ************* --}}
+      @if($errors->any())
+      <script>
+          @foreach($errors->all() as $error)
+                  toastr.error('{{$error}}');
+                  toastr.options.closeDuration = 5000;
+          @endforeach
+      </script>
+  @endif
+
+  {{-- ********* Error Message ********** --}}
+  @if(session()->has('error'))
+      <script>
+          toastr.error("{{session('error')}}");
+          toastr.options.closeDuration = 5000;
+      </script>
+  @endif
+
+  {{-- ********* Success Message ********** --}}
+  @if(session()->has('message'))
+      <script>
+          toastr.success("{{session('message')}}");
+          toastr.options.closeDuration = 5000;
+      </script>
+  @endif
+
+@endsection
