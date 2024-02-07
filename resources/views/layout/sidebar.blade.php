@@ -20,8 +20,8 @@
                     <span class="link-title">لوحة التحكم</span>
                   </a>
                 </li>
-                <li class="nav-item nav-category d-none">السائقين وخطوط السير</li>
-                <li class="nav-item d-none">
+                <li class="nav-item nav-category">السائقين وخطوط السير</li>
+                <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#driver" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title"> السائقين</span>
@@ -38,7 +38,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item d-none">
+                <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#road" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="git-merge"></i>
                     <span class="link-title"> خطوط السير</span>
@@ -73,7 +73,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item d-none">
+                <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#move" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="activity"></i>
                     <span class="link-title">حركة السيارات</span>
@@ -90,7 +90,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item d-none">
+                <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#zeet" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="cloud-snow"></i>
                     <span class="link-title">زيت السيارات</span>
@@ -107,7 +107,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item d-none">
+                <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#gaz" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="cloud-rain"></i>
                     <span class="link-title">وقود السيارات</span>
@@ -124,7 +124,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item d-none">
+                <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#maintaince" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="cloud-lightning"></i>
                     <span class="link-title">صيانة السيارات</span>
