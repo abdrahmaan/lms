@@ -3,7 +3,7 @@
 		<nav class="sidebar">
             <div class="sidebar-header">
               <a href="/dashboard" class="sidebar-brand">
-                Barq<span>Express</span>
+                Edu<span>Vision</span>
               </a>
               <div class="sidebar-toggler not-active">
                 <span></span>
@@ -20,128 +20,85 @@
                     <span class="link-title">لوحة التحكم</span>
                   </a>
                 </li>
-                <li class="nav-item nav-category">السائقين وخطوط السير</li>
+                <li class="nav-item nav-category">المدرسين والطلاب</li>
                 <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#driver" role="button" aria-expanded="false" aria-controls="emails">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#teacher" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title"> السائقين</span>
+                    <span class="link-title">إدارة المدرسين</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                   </a>
-                  <div class="collapse" id="driver">
+                  <div class="collapse" id="teacher">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">إضافة سائق</a>
+                        <a href="pages/email/inbox.html" class="nav-link">مدرس جديد</a>
                       </li>
                       <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى السائقين</a>
+                        <a href="pages/email/read.html" class="nav-link">بحث فى المدرسين</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#road" role="button" aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="git-merge"></i>
-                    <span class="link-title"> خطوط السير</span>
+                  <a class="nav-link" data-bs-toggle="collapse" href="#stu" role="button" aria-expanded="false" aria-controls="emails">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">إدارة الطلاب</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                   </a>
-                  <div class="collapse" id="road">
+                  <div class="collapse" id="stu">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">إضافة خط سير</a>
+                        <a href="pages/email/inbox.html" class="nav-link">طالب جديد</a>
                       </li>
                       <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى خطوط السير</a>
+                        <a href="pages/email/read.html" class="nav-link">بحث فى الطلاب</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item nav-category">السيارات</li>
+
+                <li class="nav-item nav-category">الفيديوهات والإمتحانات</li>
                 <li class="nav-item" data-url="car">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#cars" role="button" aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="aperture"></i>
-                    <span class="link-title"> السيارات</span>
+                  <a class="nav-link" data-bs-toggle="collapse" href="#videos" role="button" aria-expanded="false" aria-controls="emails">
+                    <i class="link-icon" data-feather="video"></i>
+                    <span class="link-title">إدارة الفيديوهات</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                   </a>
-                  <div class="collapse" id="cars">
+                  <div class="collapse" id="videos">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="/new-car" class="nav-link">إضافة سيارة</a>
+                        <a href="/new-car" class="nav-link">إضافة فيديو</a>
                       </li>
                       <li class="nav-item">
-                        <a href="/cars" class="nav-link">بحث فى السيارات</a>
+                        <a href="/cars" class="nav-link">بحث فى الفيديوهات</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/cars" class="nav-link">مشتريات الفيديوهات</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#move" role="button" aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="activity"></i>
-                    <span class="link-title">حركة السيارات</span>
+                <li class="nav-item" data-url="exams">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#exams" role="button" aria-expanded="false" aria-controls="emails">
+                    <i class="link-icon" data-feather="file-text"></i>
+                    <span class="link-title">إدارة الإمتحانات</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                   </a>
-                  <div class="collapse" id="move">
+                  <div class="collapse" id="exams">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">إضافة حركة جديدة</a>
+                        <a href="/new-car" class="nav-link">إضافة إمتحان</a>
                       </li>
                       <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى التحركات</a>
+                        <a href="/cars" class="nav-link">بحث فى الإمتحانات</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/cars" class="nav-link">نتائج الإمتحانات</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#zeet" role="button" aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="cloud-snow"></i>
-                    <span class="link-title">زيت السيارات</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                  </a>
-                  <div class="collapse" id="zeet">
-                    <ul class="nav sub-menu">
-                      <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">تغيير زيت سيارة</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى تغيير الزيت</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#gaz" role="button" aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="cloud-rain"></i>
-                    <span class="link-title">وقود السيارات</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                  </a>
-                  <div class="collapse" id="gaz">
-                    <ul class="nav sub-menu">
-                      <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">تموين وقود سيارة</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى تموين الوقود</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#maintaince" role="button" aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="cloud-lightning"></i>
-                    <span class="link-title">صيانة السيارات</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                  </a>
-                  <div class="collapse" id="maintaince">
-                    <ul class="nav sub-menu">
-                      <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">إضافة صيانة</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى الصيانات</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item nav-category">المستخدمين</li>
+
+                <li class="nav-item nav-category">المستخدمين والصلاحيات</li>
                 <li class="nav-item" data-url="user">
                   <a class="nav-link" data-bs-toggle="collapse" href="#users" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="user"></i>
@@ -162,6 +119,27 @@
                     </ul>
                   </div>
                 </li>
+                <li class="nav-item" data-url="permission">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#permission" role="button" aria-expanded="false" aria-controls="emails">
+                    <i class="link-icon" data-feather="eye"></i>
+                    <span class="link-title">صلاحيات المستخدمين</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="permission">
+                    <ul class="nav sub-menu">
+                      <li class="nav-item">
+                        <a href="/new-user" class="nav-link">صلاحية جديدة</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/users" class="nav-link">بحث فى الصلاحيات</a>
+                      </li>
+                      <li class="nav-item d-none">
+                        <a href="pages/email/read.html" class="nav-link">صلاحيات الموظفين</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                
                 
                 <li class="nav-item nav-category">الإعدادات</li>
                 <li class="nav-item" data-url="change-password">
