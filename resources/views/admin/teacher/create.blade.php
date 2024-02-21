@@ -44,24 +44,31 @@
                                         </div>
                                 </div>
                             <!-- إسم المستخدم  -->
-                                <div class="col-lg-4 my-1">
+                                <div class="col-lg-3 my-1">
                                         <div class="form-group  mx-2 d-block">
                                             <label for="username" class="text-right w-100 my-1">إسم الحساب</label>
                                             <input name="username" type="text" class="form-control text-right" id="" placeholder="إسم المستخدم">
                                         </div>
                                 </div>
                             <!-- صورة المدرس  -->
-                                <div class="col-lg-4 my-1">
+                                <div class="col-lg-3 my-1">
                                         <div class="form-group  mx-2 d-block">
                                             <label for="photo" class="text-right w-100 my-1">صورة</label>
                                             <input name="photo" type="file" class="form-control text-right" >
                                         </div>
                                 </div>
                             <!-- النسبة المتفق عليها  -->
-                            <div class="col-lg-4 my-1">
+                            <div class="col-lg-3 my-1">
                                 <div class="form-group  mx-2 d-block">
                                     <label for="commission" class="text-right w-100 my-1">النسبة المتفق عليها</label>
                                     <input name="commission" type="number" class="form-control text-right" id="" placeholder="%">
+                                </div>
+                            </div>
+                            <!-- الرصيد الإفتتاحى  -->
+                            <div class="col-lg-3 my-1">
+                                <div class="form-group  mx-2 d-block">
+                                    <label for="wallet" class="text-right w-100 my-1">الرصيد الإفتتاحى</label>
+                                    <input name="wallet" type="number" class="form-control text-right" id="" placeholder="ج.م">
                                 </div>
                             </div>
             
@@ -102,6 +109,7 @@
                 phone_number : {
                     required: true,
                     minlength: 11,
+                    maxlength: 11,
                     // pattern: /^(010|011|012|015)\d{8}$/,
                 },
                 username : {
@@ -109,6 +117,9 @@
                     minlength: 4,
                 },
                 commission : {
+                    required: true,
+                },
+                wallet : {
                     required: true,
                 },
                 
@@ -120,7 +131,8 @@
                 phone_number : {
 
                     required: "رقم التليفون مطلوب",
-                    minlength: "من فضلك ادخل رقم تليفون صحيح"
+                    minlength: "من فضلك ادخل رقم تليفون صحيح",
+                    maxlength: "من فضلك ادخل رقم تليفون صحيح"
                 },
 
                 username : {
@@ -130,6 +142,9 @@
                
                 commission : {
                     required: "النسبة المتفق عليها مطلوبة",
+                },
+                wallet : {
+                    required: "الرصيد الإفتتاحى مطلوب",
                 },
             },
             errorElement: 'span',

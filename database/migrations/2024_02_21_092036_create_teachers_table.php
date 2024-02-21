@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("Photo")->nullable();
             $table->string("Status")->default("Active");
             $table->double("Commission");
+            $table->double("Wallet");
             $table->timestamps();
         });
     }

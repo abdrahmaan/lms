@@ -17,5 +17,6 @@ class Teacher extends Model
         "Photo",
         "Status",
         "Commission",
+        "Wallet",
     ];
 }

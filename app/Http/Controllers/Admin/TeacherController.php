@@ -42,6 +42,7 @@ class TeacherController extends Controller
             "phone_number" => 'required|unique:teachers,Phone|digits:11',
             "username" => 'required|unique:teachers,Username|regex:/^[a-zA-Z]+$/',
             "commission" => "required", 
+            "wallet" => "required", 
         ],[
             "fullname.required" => "من فضلك إسم المدرس مطلوب",
             "phone_number.required" => "رقم التليفون مطلوب",
@@ -51,6 +52,7 @@ class TeacherController extends Controller
             "username.unique" => "إسم المستخدم مسجل من قبل",
             "username.regex" => "إسم المستخدم باللغة الإنجليزية بدون مسافات",
             "commission.required" => "النسبة المتفق عليها مطلوبة",
+            "wallet.required" => "الرصيد الإفتتاحى مطلوب",
         ]);
 
         $insert = Teacher::create([
@@ -58,6 +60,7 @@ class TeacherController extends Controller
             "Phone" => $request->phone_number,
             "Username" => $request->username,
             "Commission" => $request->commission,
+            "Wallet" => $request->wallet,
         ]);
 
         if ($insert) {
