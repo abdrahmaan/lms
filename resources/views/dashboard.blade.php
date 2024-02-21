@@ -17,7 +17,7 @@
                 <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                    <h6 class="card-title mb-0">عدد السيارات</h6>
+                    <h6 class="card-title mb-0">عدد </h6>
 
                     </div>
                     <div class="row">
@@ -34,7 +34,7 @@
                 <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                    <h6 class="card-title mb-0">عدد الماركات</h6>
+                    <h6 class="card-title mb-0">عدد </h6>
 
                     </div>
                     <div class="row">
@@ -51,7 +51,7 @@
                 <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                    <h6 class="card-title mb-0">عدد المستخدمين</h6>
+                    <h6 class="card-title mb-0">عدد </h6>
 
                     </div>
                     <div class="row">

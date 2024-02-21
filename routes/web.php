@@ -5,6 +5,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Admin\StudientController;
+use App\Http\Controllers\Admin\VideoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +25,80 @@ Route::middleware(['auth-user'])->group(function () {
 
        // Dashboard 
 
-       Route::redirect("/",'/dashboard');
+        Route::redirect("/",'/dashboard');
 
-       Route::get('/dashboard', [DashboardController::class,"index"]);
+        Route::get('/dashboard', [DashboardController::class,"index"]);
 
 
        // ***************************************************************************
     
+       // Teacher
+
+            // Add Teacher
+            Route::get('new-teacher', [TeacherController::class, "create"]);
+
+            // Add Teacher - submit
+            Route::post('new-teacher', [TeacherController::class, "store"]);
+
+            // View Teachers
+            Route::get('teachers', [TeacherController::class, "index"]);
+
+            // Edit Teachers
+            Route::get('edit-teacher/{id}', [TeacherController::class, "edit"]);
+
+            // Edit Teachers - submit
+            Route::post('edit-teacher/{id}', [TeacherController::class, "update"]);
+
+            // View Teachers
+            Route::get('delete-teacher/{id}', [TeacherController::class, "destroy"]);
+
+       //**************************************************************************** */    
+
+
+       // Studient
+
+            // Add Studient
+            Route::get('new-studient', [StudientController::class, "create"]);
+
+            // Add Studient - submit
+            Route::post('new-studient', [StudientController::class, "store"]);
+
+            // View Studient
+            Route::get('studients', [StudientController::class, "index"]);
+
+            // Edit Studient
+            Route::get('edit-studient/{id}', [StudientController::class, "edit"]);
+
+            // Edit Studient - submit
+            Route::post('edit-studient/{id}', [StudientController::class, "update"]);
+
+            // View Studient
+            Route::get('delete-studient/{id}', [StudientController::class, "destroy"]);
+
+       //**************************************************************************** */    
+
+       // Video
+
+            // Add Video
+            Route::get('new-video', [VideoController::class, "create"]);
+
+            // Add Video - submit
+            Route::post('new-video', [VideoController::class, "store"]);
+
+            // View Video
+            Route::get('videos', [VideoController::class, "index"]);
+
+            // Edit Video
+            Route::get('edit-video/{id}', [VideoController::class, "edit"]);
+
+            // Edit Video - submit
+            Route::post('edit-video/{id}', [VideoController::class, "update"]);
+
+            // View Video
+            Route::get('delete-video/{id}', [VideoController::class, "destroy"]);
+            
+       //**************************************************************************** */    
+
        // Cars
     
            // New Car 

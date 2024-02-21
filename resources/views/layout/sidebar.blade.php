@@ -21,7 +21,7 @@
                   </a>
                 </li>
                 <li class="nav-item nav-category">المدرسين والطلاب</li>
-                <li class="nav-item">
+                <li class="nav-item" data-url="new-teacher">
                   <a class="nav-link" data-bs-toggle="collapse" href="#teacher" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">إدارة المدرسين</span>
@@ -29,16 +29,16 @@
                   </a>
                   <div class="collapse" id="teacher">
                     <ul class="nav sub-menu">
-                      <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">مدرس جديد</a>
+                      <li class="nav-item" >
+                        <a href="/new-teacher" class="nav-link">مدرس جديد</a>
                       </li>
                       <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى المدرسين</a>
+                        <a href="#" class="nav-link">بحث فى المدرسين</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-url="new-studient">
                   <a class="nav-link" data-bs-toggle="collapse" href="#stu" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">إدارة الطلاب</span>
@@ -47,17 +47,17 @@
                   <div class="collapse" id="stu">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="pages/email/inbox.html" class="nav-link">طالب جديد</a>
+                        <a href="/new-studient" class="nav-link">طالب جديد</a>
                       </li>
                       <li class="nav-item">
-                        <a href="pages/email/read.html" class="nav-link">بحث فى الطلاب</a>
+                        <a href="#" class="nav-link">بحث فى الطلاب</a>
                       </li>
                     </ul>
                   </div>
                 </li>
 
                 <li class="nav-item nav-category">الفيديوهات والإمتحانات</li>
-                <li class="nav-item" data-url="car">
+                <li class="nav-item" data-url="video">
                   <a class="nav-link" data-bs-toggle="collapse" href="#videos" role="button" aria-expanded="false" aria-controls="emails">
                     <i class="link-icon" data-feather="video"></i>
                     <span class="link-title">إدارة الفيديوهات</span>
@@ -66,13 +66,13 @@
                   <div class="collapse" id="videos">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="/new-car" class="nav-link">إضافة فيديو</a>
+                        <a href="/new-video" class="nav-link">إضافة فيديو</a>
                       </li>
                       <li class="nav-item">
-                        <a href="/cars" class="nav-link">بحث فى الفيديوهات</a>
+                        <a href="#" class="nav-link">بحث فى الفيديوهات</a>
                       </li>
                       <li class="nav-item">
-                        <a href="/cars" class="nav-link">مشتريات الفيديوهات</a>
+                        <a href="#" class="nav-link">مشتريات الفيديوهات</a>
                       </li>
                     </ul>
                   </div>
@@ -86,13 +86,13 @@
                   <div class="collapse" id="exams">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="/new-car" class="nav-link">إضافة إمتحان</a>
+                        <a href="#" class="nav-link">إضافة إمتحان</a>
                       </li>
                       <li class="nav-item">
-                        <a href="/cars" class="nav-link">بحث فى الإمتحانات</a>
+                        <a href="#" class="nav-link">بحث فى الإمتحانات</a>
                       </li>
                       <li class="nav-item">
-                        <a href="/cars" class="nav-link">نتائج الإمتحانات</a>
+                        <a href="#" class="nav-link">نتائج الإمتحانات</a>
                       </li>
                     </ul>
                   </div>
@@ -114,7 +114,7 @@
                         <a href="/users" class="nav-link">بحث فى المستخدمين</a>
                       </li>
                       <li class="nav-item d-none">
-                        <a href="pages/email/read.html" class="nav-link">صلاحيات الموظفين</a>
+                        <a href="#" class="nav-link">صلاحيات الموظفين</a>
                       </li>
                     </ul>
                   </div>
@@ -128,13 +128,13 @@
                   <div class="collapse" id="permission">
                     <ul class="nav sub-menu">
                       <li class="nav-item">
-                        <a href="/new-user" class="nav-link">صلاحية جديدة</a>
+                        <a href="#" class="nav-link">صلاحية جديدة</a>
                       </li>
                       <li class="nav-item">
-                        <a href="/users" class="nav-link">بحث فى الصلاحيات</a>
+                        <a href="#" class="nav-link">بحث فى الصلاحيات</a>
                       </li>
                       <li class="nav-item d-none">
-                        <a href="pages/email/read.html" class="nav-link">صلاحيات الموظفين</a>
+                        <a href="#" class="nav-link">صلاحيات الموظفين</a>
                       </li>
                     </ul>
                   </div>
